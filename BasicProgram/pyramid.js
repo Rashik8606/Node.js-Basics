@@ -47,3 +47,12 @@ function Largest (){
     console.log(max)
 }
 Largest()
+
+var Person = {
+    name : 'Rashik',
+    age : 22,
+    place : 'Kochi'
+}
+for (val in Person){
+    console.log(Person[val])
+}
