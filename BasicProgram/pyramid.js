@@ -53,6 +53,13 @@ var Person = {
     age : 22,
     place : 'Kochi'
 }
+Person.dob='29-11-2002'
 for (val in Person){
-    console.log(Person[val])
+   
+}
+console.log(Person)
+
+
+function EmployeData (id,empname,empage){
+    
 }
