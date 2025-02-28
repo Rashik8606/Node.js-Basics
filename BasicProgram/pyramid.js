@@ -51,7 +51,10 @@ Largest()
 var Person = {
     name : 'Rashik',
     age : 22,
-    place : 'Kochi'
+    place : 'Kochi',
+    display : function(){
+        console.log(this.name)
+    }
 }
 Person.dob='29-11-2002'
 for (val in Person){
@@ -59,6 +62,10 @@ for (val in Person){
 }
 console.log(Person)
 
+Person.displayAge=function(){
+    console.log(this.age)
+}
+console.log(Person.displayAge())
 
 function EmployeData (id,empname,empage){
     
