@@ -67,6 +67,16 @@ Person.displayAge=function(){
 }
 console.log(Person.displayAge())
 
-function EmployeData (id,empname,empage){
-    
+function EmployeData (id,empname,empage,empcompany){
+    this.empname = empname
+    this.empage = empage
+    this.empcompany = empcompany
+    this.display = function(){
+        console.log('Name :'+this.empname, 'Age :'+ this.empage, 'Company Name :'+empcompany)
+    }
 }
+var Name1 = new EmployeData(1,'Rashik',23,'Infosis')
+var Name2 = new EmployeData(2,'Farsana',23,'Aramco Saudi')
+
+Name1.display()
+Name2.display()
