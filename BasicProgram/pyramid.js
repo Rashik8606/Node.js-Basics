@@ -80,3 +80,24 @@ var Name2 = new EmployeData(2,'Farsana',23,'Aramco Saudi')
 
 Name1.display()
 Name2.display()
+
+try{
+    console.log(x)
+}catch(error){
+    console.log(error.message)
+}
+
+try {
+    eval("Alert('hello'");
+}catch(error){
+    console.log("Syntax Error",error.message)
+}
+
+try{
+    var result = 10/0;
+    console.log('Result:'+result)
+}catch(error){
+    console.log('Error :',error.message)
+}finally{
+    console.log('this always runs')
+}
