@@ -1,3 +1,5 @@
+const { Sample } = require("./sample");
+
 function  Pyramid () {
     for (i = 1; i<=6; i++){
         row = ''
@@ -68,11 +70,12 @@ Person.displayAge=function(){
 console.log(Person.displayAge())
 
 function EmployeData (id,empname,empage,empcompany){
+    this.id = id
     this.empname = empname
     this.empage = empage
     this.empcompany = empcompany
     this.display = function(){
-        console.log('Name :'+this.empname, 'Age :'+ this.empage, 'Company Name :'+empcompany)
+        console.log('ID :'+ id,'Name :'+this.empname, 'Age :'+ this.empage, 'Company Name :'+empcompany)
     }
 }
 var Name1 = new EmployeData(1,'Rashik',23,'Infosis')
@@ -101,3 +104,5 @@ try{
 }finally{
     console.log('this always runs')
 }
+
+name = Sample()
