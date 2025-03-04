@@ -1,18 +1,28 @@
 var http = require('http')
 var fs = require('fs')
 
-http.createServer(function(req,res){
-    fs.readFile('ServerResponse/index.html',function(err,data){
-        if(err){
-            res.writeHead(500, { "Content-Type": "text/plain" });
-            res.end("Error loading the HTML file");
-            return;
+http.createServer(function ServerResponse (req,res){
+    fs.readFile('ServerResponse/index.html',function HtmlPage (err,data){
+        if (err){
+            res.writeHead(500,{'content-type':'text/html'})
+            res.end('error loading html page')
+            return
         }
-        res.writeHead(200, { "Content-Type": "text/html" })
-        res.write(data)
-        res.end()
+        if(req.url==='/'){
+            res.writeHead(200,{'content-type':'text/html'})
+            res.write(data)
+            res.end()
+        }else if(req.url==='/login'){
+            res.write('Login Page')
+            res.end()
+        }else{
+            res.writeHead(404, {'content-type':'text/html'})
+           
+            res.end()
+        }
+        
     })
-    
-}).listen(3000, ()=>{
-    console.log("Server running at http://localhost:3000")
+   
+}).listen(4000 ,() => {
+    console.log('server Running at  http://localhost:4000')
 })
