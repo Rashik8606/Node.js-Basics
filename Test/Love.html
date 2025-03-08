@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for Farsana</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .popup, .popup-miss-you {
+            display: none;
+            background: rgba(255, 78, 80, 0.9);
+            color: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: pop 0.8s ease-in-out;
+        }
+        .popup h1, .popup-miss-you h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .popup p, .popup-miss-you p {
+            font-size: 1.2rem;
+        }
+        .rose-image {
+            width: 100px;
+            margin: 20px auto;
+            display: block;
+        }
+        .show {
+            display: block;
+        }
+        .btn {
+            background-color: #ff4e50;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, background 0.3s ease;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #e43f4b;
+            transform: scale(1.1);
+        }
+        @keyframes pop {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" onclick="showPopup()">Click Me ❤️</button>
+        <button class="btn" onclick="showMissYou()">I Miss You 💕</button>
+        <div class="popup" id="popup">
+            <h1>❤️ Enter Your GirlFriend Name ❤️</h1>
+            <p>Will you be the sunshine in my life forever? ☀️💫</p>
+            <p>Say YES and let's create beautiful memories together! 💍💖</p>
+        </div>
+        <div class="popup-miss-you" id="popup-miss-you">
+            <h1>🥺 I Miss You Baby 💔</h1>
+            <img class="rose-image" src="https://i.imgur.com/OA7m9k2.png" alt="Rose Flower">
+            <p>Every moment without you feels incomplete. Can't wait to see you soon! 😘</p>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').classList.add('show');
+        }
+        function showMissYou() {
+            document.getElementById('popup-miss-you').classList.add('show');
+        }
+    </script>
+</body>
+</html>
