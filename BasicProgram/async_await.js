@@ -1,13 +1,13 @@
 const { resolve, reject } = require("promise");
 
-async function Name() {
+function Name() {
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
             resolve('Rashik')
         }, 3000);
     })
 }
-async function Age() {
+function Age() {
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
             resolve(22)
@@ -18,3 +18,9 @@ async function Age() {
 Promise.all([Name(),Age()]).then((result)=>{
     console.log(result)
 })
+
+async function getName(){
+    let getData = await Name()
+    console.log(getData)
+}
+getName()
